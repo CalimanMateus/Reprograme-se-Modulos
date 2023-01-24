@@ -1,17 +1,17 @@
 body {
-    margin: 1rem;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;    
     display: grid;
-    height: calc(100vh - 2rem);
+    height: 100vh;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 80px 2fr 1fr 80px;
     grid-template-areas:
         "n n n n"
-        "a m m m"        
-        "a cA cB cC"
-        "a f f f";
-    grid-gap: .5rem;
+        "m m m a"        
+        "cC cA cB a"
+        "f f f f";
+    //grid-gap: ;
 }
 
 nav {
@@ -31,17 +31,23 @@ main {
 
 #cA {
     background-color: gray;
-    grid-area: cA;    
+    grid-area: cA;  
+    border: black;  
+    border-radius: 0.5rem;
 }
 
 #cB {
     background-color: lightgray;
     grid-area: cB;
+    order: black;  
+    border-radius: 0.5rem;
 }
 
 #cC {
     background-color: gray;
     grid-area: cC;
+    order: black;  
+    border-radius: 0.5rem;
 }
 
 footer {
@@ -50,7 +56,7 @@ footer {
 }
 
 body * {
-    border-radius: 5px;
+    border-radius: 0px;
     padding: 5px;
 }
 
