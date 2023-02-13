@@ -14,36 +14,47 @@
 
 <body class="p-3 m-0 border-0">
 
-  <h1 class="text-center">Sistema de Pedido de Computador</h1>
+  <h1 class="text-center">Sistema de Registro de Aeronaves</h1>
   <hr>
 
   <form name="form1" action="#" method="POST" class="row g-3 needs-validation" novalidate>
     <div class="col-md-6">
-      <label for="nome" class="form-label">Nome</label>
-      <input type="text" class="form-control" id="nome" required>
-      <div class="invalid-feedback">Informe o nome corretamente.</div>
+      <label for="codigoAeronave" class="form-label">Código Aeronave</label>
+      <input type="text" class="form-control" id="codigoAeronave" required>
+      <div class="invalid-feedback">Informe o Código corretamente.</div>
     </div>
     <div class="col-md-6">
-      <label for="email" class="form-label">E-mail</label>
-      <input type="email" class="form-control" id="email" required>
-      <div class="invalid-feedback">Informe o e-mail corretamente.</div>
+      <label for="nomeComandante" class="form-label">Nome Comandante Aeronave</label>
+      <input type="text" class="form-control" id="nomeComandante" required>
+      <div class="invalid-feedback">Informe o Nome do Comandante corretamente.</div>
     </div>
     <div class="col-md-6">
-      <label for="celular" class="form-label">Celular</label>
-      <input type="text" class="form-control" id="celular" placeholder="(99)99999-9999" pattern="\(\d{2}\)\d{5}-\d{4}"
+      <label for="passageiros" class="form-label">Númeo de passageiros</label>
+      <input type="text" class="form-control" id="numeroPassageiros" required>
+      <div class="invalid-feedback">Informe o número de passageiros corretamente.</div>
+    </div>
+    <div class="col-md-6">
+      <label for="cargaMin" class="form-label">Carga Mínima</label>
+      <input type="text" class="form-control" id="cargaMin"
         required>
-      <div id="feedbackCelular" class="invalid-feedback">Informe o celular corretamente.</div>
+      <div id="feedbackCargaMin" class="invalid-feedback">Informe carga mínima corretamente corretamente.</div>
     </div>
     <div class="col-md-6">
-      <label for="estado" class="form-label">Estado</label>
-      <select id="estado" class="form-select" required>
-        <option value="" disabled selected>Selecione o estado...</option>
-        <option value="ES">ES</option>
-        <option value="MG">MG</option>
-        <option value="RJ">RJ</option>
-        <option value="SP">SP</option>
+      <label for="cargaMax" class="form-label">Carga Máxima</label>
+      <input type="text" class="form-control" id="cargaMax"
+        required>
+      <div id="feedbackCargaMax" class="invalid-feedback">Informe carga máxima corretamente corretamente.</div>
+    </div>
+    <div class="col-md-6">
+      <label for="classe" class="form-label">Clásse da Aeronave</label>
+      <select id="classeAeronave" class="form-select" required>
+        <option value="" disabled selected>Selecione a clásse da Aeronave</option>
+        <option value="batalha">Batalha</option>
+        <option value="cargas">Transporte de cargas</option>
+        <option value="passageiros">Transporte de passageiros</option>
+        <option value="animais">Transporte de animais</option>
       </select>
-      <div class="invalid-feedback">Informe o estado corretamente.</div>
+      <div class="invalid-feedback">Informe a clásse corretamente.</div>
     </div>
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
       <input type="submit" class="btn btn-primary me-md-2" value="Inserir" id="btnInserir">
@@ -55,12 +66,12 @@
   <table class="table table-striped" id="tabela">
     <thead>
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">Nome</th>
-        <th scope="col">E-mail</th>
-        <th scope="col">Celular</th>
-        <th scope="col">Estado</th>
-        <th scope="col">Ação</th>
+        <th scope="col">Código Aeronave</th>
+        <th scope="col">Nome do Comandante</th>
+        <th scope="col">Número de passageiros</th>
+        <th scope="col">Carga Mínima</th>
+        <th scope="col">Carga Máxima</th>
+        <th scope="col">Clásse da Aeronave</th>
       </tr>
     </thead>
     <tbody>
